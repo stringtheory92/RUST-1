@@ -2,6 +2,8 @@
 use rand::prelude::*;
 // pub mod rectangle;
 // use core::num;
+mod garden;
+use garden::vegetables::asparagus::{Asparagus};
 
 // use rectangle::{Rectangle, print_stuff};
 // // pub mod ip;
@@ -66,10 +68,8 @@ fn main() {
 //         None => None,
 //         Some(i) => Some(i+1),
 //     }
-    let config_max = Some(3u8);
-
-    match config_max {
-        Some(max) => println!("The maximum is configured to be {}", max),
-        _ => (),
-    }
+    let mut a = Asparagus::new(String::from("green"), 4);
+    a.grow();
+    // let mut a = garden::vegetables::asparagus::Asparagus::new(String::from("green"), 4);
+    println!("{:#?}", a);
 }
