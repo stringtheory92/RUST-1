@@ -1,5 +1,6 @@
 // use rand::Rng;
 use rand::prelude::*;
+use std::collections::HashMap;
 // pub mod rectangle;
 // use core::num;
 mod garden;
@@ -72,4 +73,9 @@ fn main() {
     a.grow();
     // let mut a = garden::vegetables::asparagus::Asparagus::new(String::from("green"), 4);
     println!("{:#?}", a);
+
+    let mut map = HashMap::new();
+    map.insert(1, 2);
+    println!("Map: {:?}", map);
+
 }
